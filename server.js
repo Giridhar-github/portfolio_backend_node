@@ -10,7 +10,8 @@ const webUrl = process.env.REACT_URL;
 const corsConfig = {
   origin: function (origin, callback) {
     const allowedOrigins = [
-      webUrl
+      webUrl,
+      "http://localhost:5173", 
     ];
     if (!origin || allowedOrigins.includes(origin)) {
       callback(null, true);
@@ -20,6 +21,7 @@ const corsConfig = {
   },
   methods: ["GET"],
 };
+
 
 app.use(cors(corsConfig));
 app.use(express.json());
