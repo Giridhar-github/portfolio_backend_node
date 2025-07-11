@@ -6,7 +6,8 @@ const jwt = require("jsonwebtoken");
 
 const app = express();
 
-const webUrl = process.env.REACT_URL;
+let webUrl = process.env.REACT_URL;
+webUrl = 'https://portfolio-five-brown-t3mr74xxem.vercel.app';
 const corsConfig = {
   origin: function (origin, callback) {
     const allowedOrigins = [
