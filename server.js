@@ -7,7 +7,7 @@ const jwt = require("jsonwebtoken");
 const app = express();
 
 const corsConfig = {
-  origin: ["http://localhost:5173"],
+  origin: ["http://localhost:5173","https://portfolio-five-brown-t3mr74xxem.vercel.app/"],
   methods: ["GET"],
 };
 
@@ -20,7 +20,6 @@ const jwt_secret = process.env.JWT_SECRET;
 const token = jwt.sign({ userid: "g!r!d#@r5045" }, jwt_secret, {
   expiresIn: "2y",
 });
-console.log(token);
 
 function authenticate(req, res, next) {
   const authHeader = req.headers.authorization;
