@@ -6,8 +6,9 @@ const jwt = require("jsonwebtoken");
 
 const app = express();
 
+const webUrl = process.env.REACT_URL;
 const corsConfig = {
-  origin: [process.env.REACT_URL],
+  origin: [webUrl],
   methods: ["GET"],
 };
 
