@@ -7,7 +7,7 @@ const jwt = require("jsonwebtoken");
 const app = express();
 
 const corsConfig = {
-  origin: ["http://localhost:5173","https://portfolio-five-brown-t3mr74xxem.vercel.app/"],
+  origin: ["http://localhost:5173","https://portfolio-five-brown-t3mr74xxem.vercel.app"],
   methods: ["GET"],
 };
 
