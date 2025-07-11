@@ -10,7 +10,7 @@ const webUrl = process.env.REACT_URL;
 const corsConfig = {
   origin: function (origin, callback) {
     const allowedOrigins = [
-      process.env.REACT_URL
+      webUrl
     ];
     if (!origin || allowedOrigins.includes(origin)) {
       callback(null, true);
