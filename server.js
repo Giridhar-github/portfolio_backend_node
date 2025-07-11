@@ -6,19 +6,9 @@ const jwt = require("jsonwebtoken");
 
 const app = express();
 
-let webUrl = process.env.REACT_URL;
+const webUrl = process.env.REACT_URL;
 const corsConfig = {
-  origin: function (origin, callback) {
-    const allowedOrigins = [
-      webUrl,
-      "http://localhost:5173", // local dev
-    ];
-    if (!origin || allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error("Not allowed by CORS"));
-    }
-  },
+  origin: [webUrl],
   methods: ["GET"],
 };
 
